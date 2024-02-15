@@ -1,9 +1,10 @@
 
+import Home from "./01 Home/Jsx/index"
 
 function App() {
 
   return <div>
-            SOON TO BE 
+            <Home/>
   </div>
 }
 
