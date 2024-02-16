@@ -21,7 +21,6 @@ body{
     padding: 1rem;
 }
 
-
 #menuIconContainer{
     display: flex;
     flex-direction: column;
@@ -60,5 +59,17 @@ body{
     align-items: center;
     button{
         width: 45%;
+    }
+}
+
+@media (orientation: "landscape"){
+
+    #NavigationContainer{
+        padding: 2rem 5rem;
+    }
+
+    #navList{
+        display: flex;
+        gap: 2.5rem;
     }
 }

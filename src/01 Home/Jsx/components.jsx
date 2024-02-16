@@ -1,8 +1,7 @@
-
+import { useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import "../Styles/components/index.css"
-import { useState } from "react";
 
 
 
@@ -71,7 +70,7 @@ function MenuBody({controller}){
 }
 
 function NavList(){
-    return <motion.div>
+    return <motion.div id="navList">
                 <motion.p>Set Test</motion.p>
                 <motion.p>Take Test</motion.p>
                 <motion.p>Contact</motion.p>

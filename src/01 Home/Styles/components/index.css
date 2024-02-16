@@ -60,4 +60,14 @@ body {
 }
 #menuBodyContainer button {
   width: 45%;
+}
+
+@media (orientation: landscape) {
+  #NavigationContainer {
+    padding: 2rem 5rem;
+  }
+  #navList {
+    display: flex;
+    gap: 2.5rem;
+  }
 }/*# sourceMappingURL=index.css.map */
