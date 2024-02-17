@@ -1,9 +1,10 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { Navigation } from "./components";
 
 
 
 export default function Home(){
     return <motion.div>
-                Soon To Be Home Page
+                    <Navigation/>
     </motion.div>
 }
