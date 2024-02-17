@@ -75,6 +75,9 @@ body{
 }
 
 #textContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     #header{
         font-family: bebas;
         font-size: 1.8rem;
@@ -86,6 +89,10 @@ body{
         font-weight: 500;
         font-size: 0.8rem;
     }
+    button{
+        margin-top: 1rem;
+        width: fit-content;
+    }
 }
 
 #heroContainer{
@@ -94,6 +101,71 @@ body{
     img{
         width: 100%;
         height: auto;
+    }
+}
+
+#successContainer{
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+    #heading{
+        font-family: bebas;
+        font-size: 2rem;
+    }
+}
+
+#metricContainer{
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    .aMetric{
+        width: 32vw;
+    }
+}
+
+#benefitContainer{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    #imageContainer{
+        width: 90%;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 1rem;
+        border: 0.2rem dashed brown;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    #listOBenefitContainer{
+        padding: 2rem 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        #headingP{
+            font-family: bebas;
+            font-size: 1.5rem;
+            padding-bottom: 2rem;
+            align-self: center;
+        }
+        #aBenefit{
+            height: 15vh;
+            padding-bottom: 1rem;
+            #heading{
+                font-family: bebas;
+            }
+        }
     }
 }
 
@@ -126,12 +198,28 @@ body{
 
         button{
             margin-top: 1rem;
+            align-self: flex-start;
         }
     }
 
     #heroContainer{
         padding: 0;
         width: 50%;
+        height: 100%;
         overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    #successContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #bodyText{
+            display: block;
+            width: 75%;
+        }
     }
 }

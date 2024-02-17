@@ -98,3 +98,61 @@ function HeroImage(){
                 <motion.img src={Hero}  alt="Hero Image"/>
             </motion.div>
 }
+
+
+export function Success(){
+    return <motion.div id="successContainer">
+                <motion.p id="heading">
+                    OUR SUCCESS
+                </motion.p>
+                <motion.p id="bodyText">
+                    Our Success is rooted in Dedication, team work and a relentless pursiut of excellence. Together, we acheive milestones that define our journey and shape our future
+                </motion.p>
+                <Metrics/>
+            </motion.div>
+}
+
+function Metrics(){
+    return <motion.div id="metricContainer">
+                <motion.div className="aMetric">
+                    <motion.p id="heading">110+</motion.p>
+                    <motion.p>Instutions</motion.p>
+                </motion.div>
+                <motion.div className="aMetric">
+                    <motion.p id="heading">25+</motion.p>
+                    <motion.p>Countries</motion.p>
+                </motion.div>
+                <motion.div className="aMetric">
+                    <motion.p id="heading">175+ </motion.p>
+                    <motion.p>Instructors</motion.p>
+                </motion.div>
+
+            </motion.div>
+}
+
+
+export function Benefit(){
+    return <motion.div id="benefitContainer">
+                <motion.div id="imageContainer">
+                    <motion.img src={Hero}  />
+                </motion.div>
+                <ListOBenefit/>
+    </motion.div>
+}
+
+function ListOBenefit(){
+    const bodycontents = ["With testal you get can realtime updates on what actions your test takers are performing resulting in better overseeing of your test takers","Testal gives you the opportunity to accurately review the actions of your test takers through out the test or examination","To help with making decisons on the integrity of a test taker during an exam or test we at testal have provided an avenue to send a summary on of the actions taken by the test taker to assist with your decision"]
+    return <motion.div id="listOBenefitContainer">
+                <motion.p id="headingP">Benefit of this platform</motion.p>
+                <ABenefit heading="RealTime Updates" bodyText={bodycontents[0]}  />
+                <ABenefit heading="Action Timestamps"  bodyText={bodycontents[1]} />
+                <ABenefit heading="Performance Summary"  bodyText={bodycontents[2]}/>
+    </motion.div>
+}
+
+function ABenefit({heading,bodyText}){
+    return <motion.div id="aBenefit">
+                <motion.p id="heading">{heading}</motion.p>
+                <motion.p id="bodyText">{bodyText}</motion.p>
+    </motion.div>
+}
