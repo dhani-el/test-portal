@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: montserrat;
 }
 
 body {
@@ -73,9 +74,21 @@ body {
   padding: 2rem;
 }
 
+#textContainer #header {
+  font-family: bebas;
+  font-size: 1.8rem;
+  text-align: justify;
+  padding-bottom: 1.5rem;
+}
+#textContainer #bodyText {
+  text-align: justify;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
 #heroContainer {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
 }
 #heroContainer img {
   width: 100%;
@@ -93,8 +106,20 @@ body {
   #introContainer {
     flex-direction: row;
     padding: 5rem;
+    height: 80vh;
+  }
+  #textContainer {
+    width: 50%;
+  }
+  #textContainer #header {
+    font-size: 2.5rem;
+  }
+  #textContainer #bodyText {
+    font-size: 1.2rem;
   }
   #heroContainer {
     padding: 0;
+    width: 50%;
+    overflow: hidden;
   }
 }/*# sourceMappingURL=index.css.map */

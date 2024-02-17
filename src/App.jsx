@@ -1,5 +1,6 @@
 
-import Home from "./01 Home/Jsx/index"
+import Home from "./01 Home/Jsx/index";
+import "./general style/index.css";
 
 function App() {
 
