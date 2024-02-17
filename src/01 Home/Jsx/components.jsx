@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import Hero from "../../assets/Hero.png"
 import "../Styles/components/index.css"
 
 
@@ -28,14 +29,6 @@ function NavigationSub(){
                 {!isLandscape && <MenuBody controller={menuBodyController} />}
     </motion.div>
 }
-
-// function MenuComponent(){
-//     const menuBodyController = useAnimationControls();
-//     return <motion.div id="menuComponentContainer">
-//                 <MenuIcon bodyController={menuBodyController} />
-//                 <MenuBody controller={menuBodyController} />
-//     </motion.div>
-// }
 
 function MenuIcon({bodyController}){
     const [menuDeployed, setMenuDeployed] = useState(false)
@@ -77,4 +70,30 @@ function NavList(){
                 <button>Login</button>
                 <button>Sign Up</button>
     </motion.div>
+}
+
+
+export function Intro(){
+    return <motion.div id="introContainer">
+              <Texts/>
+              <HeroImage/>
+            </motion.div>
+}
+
+function Texts(){
+    return <motion.div>
+                <motion.p>
+                    The Most Secure Way For Remote Tests
+                </motion.p>
+                <motion.p>
+                    Set Remote Tests and be rest assured that your test are secured with minimal effort and realtime feedback on the actions of your test takers. Rest assured your remote test and examinations are now more secured than those done in person. 
+                </motion.p>
+                <button>Sign Up Now</button>
+            </motion.div>
+}
+
+function HeroImage(){
+    return <motion.div id="heroContainer">
+                <motion.img src={Hero}  alt="Hero Image"/>
+            </motion.div>
 }

@@ -11,6 +11,10 @@ body {
   max-width: 100vw;
 }
 
+#homeContainer {
+  width: 100vw;
+}
+
 #NavigationContainer {
   width: 100vw;
   height: -moz-fit-content;
@@ -62,6 +66,22 @@ body {
   width: 45%;
 }
 
+#introContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+#heroContainer {
+  width: 100%;
+  padding: 2rem;
+}
+#heroContainer img {
+  width: 100%;
+  height: auto;
+}
+
 @media (orientation: landscape) {
   #NavigationContainer {
     padding: 2rem 5rem;
@@ -69,5 +89,12 @@ body {
   #navList {
     display: flex;
     gap: 2.5rem;
+  }
+  #introContainer {
+    flex-direction: row;
+    padding: 5rem;
+  }
+  #heroContainer {
+    padding: 0;
   }
 }/*# sourceMappingURL=index.css.map */
