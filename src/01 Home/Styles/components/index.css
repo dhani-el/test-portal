@@ -102,6 +102,7 @@ body {
   #navList {
     display: flex;
     gap: 2.5rem;
+    align-items: center;
   }
   #introContainer {
     flex-direction: row;
@@ -116,6 +117,9 @@ body {
   }
   #textContainer #bodyText {
     font-size: 1.2rem;
+  }
+  #textContainer button {
+    margin-top: 1rem;
   }
   #heroContainer {
     padding: 0;

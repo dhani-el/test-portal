@@ -106,6 +106,7 @@ body{
     #navList{
         display: flex;
         gap: 2.5rem;
+        align-items: center;
     }
 
     #introContainer{
@@ -121,6 +122,10 @@ body{
         }
         #bodyText{
             font-size: 1.2rem;
+        }
+
+        button{
+            margin-top: 1rem;
         }
     }
 
