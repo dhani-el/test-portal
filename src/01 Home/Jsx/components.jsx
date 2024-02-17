@@ -98,3 +98,34 @@ function HeroImage(){
                 <motion.img src={Hero}  alt="Hero Image"/>
             </motion.div>
 }
+
+
+export function Success(){
+    return <motion.div id="successContainer">
+                <motion.p id="heading">
+                    OUR SUCCESS
+                </motion.p>
+                <motion.p id="bodyText">
+                    Our Success is rooted in Dedication, team work and a relentless pursiut of excellence. Together, we acheive milestones that define our journey and shape our future
+                </motion.p>
+                <Metrics/>
+            </motion.div>
+}
+
+function Metrics(){
+    return <motion.div id="metricContainer">
+                <motion.div className="aMetric">
+                    <motion.p id="heading">110+</motion.p>
+                    <motion.p>Instutions</motion.p>
+                </motion.div>
+                <motion.div className="aMetric">
+                    <motion.p id="heading">25+</motion.p>
+                    <motion.p>Countries</motion.p>
+                </motion.div>
+                <motion.div className="aMetric">
+                    <motion.p id="heading">175+ </motion.p>
+                    <motion.p>Instructors</motion.p>
+                </motion.div>
+
+            </motion.div>
+}
