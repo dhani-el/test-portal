@@ -127,6 +127,50 @@ body {
   width: 32vw;
 }
 
+#benefitContainer {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#benefitContainer #imageContainer {
+  width: 90%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 0.2rem dashed brown;
+}
+#benefitContainer #imageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#benefitContainer #listOBenefitContainer {
+  padding: 2rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#benefitContainer #listOBenefitContainer #headingP {
+  font-family: bebas;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+  align-self: center;
+}
+#benefitContainer #listOBenefitContainer #aBenefit {
+  height: 15vh;
+  padding-bottom: 1rem;
+}
+#benefitContainer #listOBenefitContainer #aBenefit #heading {
+  font-family: bebas;
+}
+
 @media (orientation: landscape) {
   #NavigationContainer {
     padding: 2rem 5rem;
