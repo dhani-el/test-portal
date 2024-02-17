@@ -3,6 +3,7 @@ import { motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import Hero from "../../assets/Hero.png"
 import "../Styles/components/index.css"
+import { Button } from "@mui/material";
 
 
 
@@ -57,8 +58,8 @@ function MenuBody({controller}){
                 <motion.p>Set Test</motion.p>
                 <motion.p>Take Test</motion.p>
                 <motion.p>Contact</motion.p>
-                <button>Login</button>
-                <button>Sign Up</button>
+                <Button variant="contained">Login</Button>
+                <Button variant="outlined">Sign Up</Button>
             </motion.div>
 }
 
@@ -67,8 +68,8 @@ function NavList(){
                 <motion.p>Set Test</motion.p>
                 <motion.p>Take Test</motion.p>
                 <motion.p>Contact</motion.p>
-                <button>Login</button>
-                <button>Sign Up</button>
+                <Button variant="contained">Login</Button>
+                <Button variant="outlined">Sign Up</Button>
     </motion.div>
 }
 
@@ -88,7 +89,7 @@ function Texts(){
                 <motion.p id="bodyText">
                     Set Remote Tests and be rest assured that your test are secured with minimal effort and realtime feedback on the actions of your test takers. Rest assured your remote test and examinations are now more secured than those done in person. 
                 </motion.p>
-                <button>Sign Up Now</button>
+                <Button variant="contained">Sign Up Now</Button>
             </motion.div>
 }
 
