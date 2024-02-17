@@ -81,11 +81,11 @@ export function Intro(){
 }
 
 function Texts(){
-    return <motion.div>
-                <motion.p>
+    return <motion.div id="textContainer">
+                <motion.p id="header" >
                     The Most Secure Way For Remote Tests
                 </motion.p>
-                <motion.p>
+                <motion.p id="bodyText">
                     Set Remote Tests and be rest assured that your test are secured with minimal effort and realtime feedback on the actions of your test takers. Rest assured your remote test and examinations are now more secured than those done in person. 
                 </motion.p>
                 <button>Sign Up Now</button>
