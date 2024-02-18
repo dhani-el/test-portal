@@ -219,4 +219,17 @@ body {
     display: block;
     width: 75%;
   }
+  #benefitContainer {
+    flex-direction: row-reverse;
+    height: -moz-fit-content;
+    height: fit-content;
+    justify-content: stretch;
+  }
+  #benefitContainer #imageContainer {
+    height: 70%;
+    width: 35%;
+  }
+  #benefitContainer #listOBenefitContainer {
+    width: 70%;
+  }
 }/*# sourceMappingURL=index.css.map */

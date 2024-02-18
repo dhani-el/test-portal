@@ -222,4 +222,17 @@ body{
             width: 75%;
         }
     }
+
+    #benefitContainer{
+        flex-direction: row-reverse;
+        height: fit-content;
+        justify-content: stretch;
+        #imageContainer{
+            height: 70%;
+            width: 35%;
+        }
+        #listOBenefitContainer{
+            width: 70%;
+        }
+    }
 }
