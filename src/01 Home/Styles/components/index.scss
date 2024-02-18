@@ -172,6 +172,9 @@ body{
 #Testimonial{
     padding:0.5rem 2rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     #GeneralTextContainer{
         padding-bottom: 2rem;
         #testimonialHeader{
@@ -296,6 +299,21 @@ body{
         #bodyText{
             display: block;
             width: 75%;
+        }
+    }
+    #Testimonial{
+        flex-direction: row;
+        gap: 2rem;
+        #GeneralTextContainer{
+            width: calc(50% - 1rem);
+        }
+        #listOTestimonials{
+            width: calc(50% - 1rem);
+            overflow-x: hidden;
+            #aTestimonialContainer{
+                width: 100%;
+                height: 55vh;
+            }
         }
     }
 }
