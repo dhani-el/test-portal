@@ -156,3 +156,58 @@ function ABenefit({heading,bodyText}){
                 <motion.p id="bodyText">{bodyText}</motion.p>
     </motion.div>
 }
+
+export function Testimonial(){
+    const testimonials = [{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"}]
+
+    return <motion.div id="Testimonial">
+            <motion.div id="GeneralTextContainer">
+                <TestimonialHeader/>
+                <GeneralTestimonial/>
+            </motion.div>
+            <ListOfTestimonials testimonials={testimonials}/>
+    </motion.div>
+}
+
+function TestimonialHeader(){
+    return <motion.div id="testimonialHeader">
+                <motion.span></motion.span>
+                <motion.p>TESTIMONIAL</motion.p>
+    </motion.div>
+}
+
+function GeneralTestimonial(){
+    return <motion.div id="generalBody" >
+                <motion.p id="theySay">What They Say?</motion.p>
+                <motion.p id="body">Testal has over 11k+ Positive Ratings from our users around the world. Most of the Teachers, Instructors and Students were greatly helped by the website.</motion.p>
+                <Button variant="contained" >Give us Your FeedBack</Button>
+    </motion.div>
+}
+
+// @todo implement swiper or use horizontal scroll snapping 
+function ListOfTestimonials({testimonials}){
+    return <motion.div id="listOTestimonials">
+                {
+                    testimonials.map(function(testimonial){
+                            return <Atestimonial imgLinks={testimonial.image} name={testimonial.name} role={testimonial.role} words={testimonial.text} />
+                    })
+                }
+    </motion.div>
+}
+
+function Atestimonial({imgLinks,words,name,role}){
+    return <motion.div id="aTestimonialContainer">
+                <motion.div id="imageDiv">
+                    <motion.img src={imgLinks} />
+                </motion.div>
+                <motion.div id="textsDiv">
+                    <motion.p id="opinion">
+                        {words}
+                    </motion.p>
+                    <motion.div id="biodataContainer"> 
+                        <motion.p id="nameP">{name}</motion.p>
+                        <motion.p id="roleP">{role}</motion.p>
+                    </motion.div>
+                </motion.div>
+            </motion.div>
+}
