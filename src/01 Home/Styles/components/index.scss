@@ -129,6 +129,7 @@ body{
 #benefitContainer{
     width: 100%;
     padding: 2rem;
+    padding-bottom: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,7 +161,6 @@ body{
             align-self: center;
         }
         #aBenefit{
-            height: 15vh;
             padding-bottom: 1rem;
             #heading{
                 font-family: bebas;
@@ -168,6 +168,82 @@ body{
         }
     }
 }
+
+#Testimonial{
+    padding:0.5rem 2rem;
+    width: 100%;
+    #GeneralTextContainer{
+        padding-bottom: 2rem;
+        #testimonialHeader{
+            display: flex;
+            align-items:center ;
+            justify-content: center;
+            gap: 1rem;
+            span{
+                display: block;
+                border-top: 0.2rem rgb(0, 0, 81) solid;
+                width: 6rem;
+            }
+            p{
+                font-family: bebas;
+                font-size: 1.5rem;
+            }
+        }
+        #generalBody{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #theySay{
+                padding: 1rem 0;
+                font-weight: 700;
+                font-family: 1.2rem;
+            }
+            #body{
+                font-weight: 400;
+                padding-bottom: 1.5rem;
+                text-align: justify;
+            }
+        }
+    }
+    #listOTestimonials{
+        overflow-x: scroll;
+        #aTestimonialContainer{
+            height: 45vh;
+            width: 90vw;
+            padding-top: 1rem;
+            #imageDiv{
+                height: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                img{
+                    height: 100%;
+                    width: auto;
+                }
+            }
+            #textsDiv{
+                border-left: navy solid 0.8rem;
+                border-top-left-radius: 0.5rem;
+                border-bottom-left-radius: 0.5rem;
+                padding-left: 0.5rem;
+                #opinion{
+                    padding: 1rem 0rem;
+                }
+                #biodataContainer{
+                    #nameP{
+                        font-family: bebas;
+                    }
+                    #roleP{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 @media (orientation: "landscape"){
     

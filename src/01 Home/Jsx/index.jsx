@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Navigation, Intro, Success, Benefit } from "./components";
+import { Navigation, Intro, Success, Benefit, Testimonial } from "./components";
 
 
 
@@ -9,5 +9,6 @@ export default function Home(){
                     <Intro/>
                     <Success/>
                     <Benefit/>
+                    <Testimonial/>
     </motion.div>
 }
