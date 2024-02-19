@@ -83,7 +83,7 @@ body {
 #textContainer #bodyText {
   text-align: justify;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 #heroContainer {
@@ -116,7 +116,7 @@ body {
     font-size: 2.5rem;
   }
   #textContainer #bodyText {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
   #textContainer button {
     margin-top: 1rem;
