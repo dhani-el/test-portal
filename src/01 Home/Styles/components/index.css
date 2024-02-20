@@ -363,4 +363,18 @@ body {
     width: 100%;
     height: 55vh;
   }
+  #footerContainer #footerMainSection {
+    width: 100%;
+  }
+  #footerContainer #footerMainSection #logoContainer {
+    width: 20%;
+  }
+  #footerContainer #footerMainSection #footerCategoriesContainer {
+    width: 75%;
+    justify-content: space-around;
+  }
+  #footerContainer #footerMainSection #footerCategoriesContainer #footerCategoryContainer {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }/*# sourceMappingURL=index.css.map */

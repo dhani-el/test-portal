@@ -368,4 +368,20 @@ body{
             }
         }
     }
+    #footerContainer{
+
+        #footerMainSection{
+            width: 100%;
+            #logoContainer{
+                width: 20%;
+            }
+            #footerCategoriesContainer{
+                width: 75%;
+                justify-content: space-around;
+                #footerCategoryContainer{
+                    width: fit-content;
+                }
+            }
+        }
+    }
 }
