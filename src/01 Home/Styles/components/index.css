@@ -246,6 +246,60 @@ body {
   font-size: 0.8rem;
 }
 
+#footerContainer {
+  width: 100%;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+  background-color: cornflowerblue;
+}
+#footerContainer #footerMainSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+#footerContainer #footerMainSection #logoContainer {
+  padding-top: 3.4rem;
+}
+#footerContainer #footerMainSection #footerCategoriesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: end;
+}
+#footerContainer #footerMainSection #footerCategoriesContainer #footerCategoryContainer {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+#footerContainer #footerMainSection #footerCategoriesContainer #footerCategoryContainer #categoryHeading {
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+#footerContainer #footerMainSection #footerCategoriesContainer #footerCategoryContainer #bodyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#footerContainer #bottomFooterBandContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  color: white;
+}
+#footerContainer #bottomFooterBandContainer #rightsP {
+  font-weight: 600;
+}
+#footerContainer #bottomFooterBandContainer #footerSocialsContainer {
+  display: flex;
+  gap: 1rem;
+}
+
 @media (orientation: landscape) {
   #NavigationContainer {
     padding: 2rem 5rem;

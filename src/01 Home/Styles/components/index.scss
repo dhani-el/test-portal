@@ -246,7 +246,59 @@ body{
     }
 }
 
-
+#footerContainer{
+    width: 100%;
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+    background-color: cornflowerblue;
+    #footerMainSection{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        #logoContainer{
+            padding-top: 3.4rem;
+        }
+        #footerCategoriesContainer{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: end;
+            #footerCategoryContainer{
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 1rem;
+                #categoryHeading{
+                    padding-right: 0.5rem;
+                    padding-bottom: 1rem;
+                    font-weight: 700;
+                }
+                #bodyContent{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+            }
+        }
+    }
+    #bottomFooterBandContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        color: white;
+        #rightsP{
+            font-weight: 600;
+        }
+        #footerSocialsContainer{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}
 
 @media (orientation: "landscape"){
     
