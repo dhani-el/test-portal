@@ -15,7 +15,7 @@ export function Navigation(){
 }
 
 function Logo(){
-    return <motion.div>
+    return <motion.div id="logoContainer">
                 <motion.p>
                     TESTAL
                 </motion.p>
@@ -209,5 +209,60 @@ function Atestimonial({imgLinks,words,name,role}){
                         <motion.p id="roleP">{role}</motion.p>
                     </motion.div>
                 </motion.div>
+            </motion.div>
+}
+
+
+export function Footer(){
+    return <motion.div id="footerContainer">
+                <motion.div id="footerMainSection">
+                    <Logo/>
+                    <FooterCategories/>
+                </motion.div>
+                <BottomFooterBand/>
+            </motion.div>
+}
+
+function FooterCategories(){
+    return <motion.div id="footerCategoriesContainer">
+                <FooterCategory header="" subContents={["Take Test","Set Test","Signup","Login"]} />
+                <FooterCategory header="Company" subContents={["About Us","Careers","Press","News"]} />
+                <FooterCategory header="Social" subContents={["Instagram","Linkedin","Medium","Twitter"]} />
+                <FooterCategory header="Legal" subContents={["Contact","Cookies","Privacy","Terms"]} />
+            </motion.div>
+}
+
+function FooterCategory({header,subContents = []}){
+    return <motion.div id="footerCategoryContainer">
+                <motion.p id="categoryHeading">
+                    {header}
+                </motion.p>
+                <motion.div id="bodyContent">
+                    {
+                        subContents.map(content => {
+                                return <motion.p>
+                                            {content}
+                                        </motion.p>
+                        })
+                    }
+                </motion.div>
+    </motion.div>
+}
+
+function BottomFooterBand(){
+    return <motion.div id="bottomFooterBandContainer">
+                <motion.p id="rightsP">
+                    © 2024 Coderosion. All rights reserved.
+                </motion.p>
+                <FooterSocials/>
+            </motion.div>
+}
+
+function FooterSocials(){
+    return <motion.div id="footerSocialsContainer" >
+                <motion.span>Insta</motion.span>
+                <motion.span>whats</motion.span>
+                <motion.span>link</motion.span>
+                <motion.span>twitt</motion.span>
             </motion.div>
 }
