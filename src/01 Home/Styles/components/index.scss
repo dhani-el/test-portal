@@ -24,6 +24,26 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    #logoContainer{
+        width: 30%;
+        #pictureElement{
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    #navigationSub{
+        #navList{
+            #loginButton{
+                background-color: rgb(1, 16, 146);
+            }
+            #signUp{
+                color: rgb(1, 16, 146);
+                border-color: rgb(1, 16, 146);
+            }
+        }
+    }
 }
 
 #menuIconContainer{
@@ -92,6 +112,8 @@ body{
     button{
         margin-top: 1rem;
         width: fit-content;
+        background-color: rgb(1, 16, 146);
+        font-family: montserrat;
     }
 }
 
@@ -257,7 +279,13 @@ body{
         justify-content: space-between;
         padding-bottom: 2rem;
         #logoContainer{
-            padding-top: 3.4rem;
+            width: 20%;
+            #pictureElement{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+            }
         }
         #footerCategoriesContainer{
             display: flex;
@@ -304,6 +332,15 @@ body{
     
     #NavigationContainer{
         padding: 2rem 5rem;
+        #logoContainer{
+            width: 8%;
+            #pictureElement{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+            }
+        }
     }
 
     #navList{
@@ -373,7 +410,13 @@ body{
         #footerMainSection{
             width: 100%;
             #logoContainer{
-                width: 20%;
+                width: 8%;
+                #pictureElement{
+                    width: 100%;
+                }
+                img{
+                    width: 100%;
+                }
             }
             #footerCategoriesContainer{
                 width: 75%;

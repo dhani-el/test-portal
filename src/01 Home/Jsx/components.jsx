@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import { useNavigate } from "react-router-dom";
 import Hero from "../../assets/Hero.png"
 import "../Styles/components/index.css"
 import { Button } from "@mui/material";
+import smallLogo from "../../assets/logos/1.png";
+import mediumLogo from "../../assets/logos/2.png";
+import largeLogo from "../../assets/logos/3.png";
+import xLargeLogo from "../../assets/logos/4.png";
 
 
 
@@ -15,10 +20,16 @@ export function Navigation(){
 }
 
 function Logo(){
-    return <motion.div id="logoContainer">
-                <motion.p>
-                    TESTAL
-                </motion.p>
+    const navigate = useNavigate();
+
+    return <motion.div id="logoContainer" onClick={()=>{navigate("/")}}>
+                <picture id="pictureElement">
+                    <source media="(min-width:1200px)" srcset={xLargeLogo} />
+                    <source media="(min-width:800px)" srcset={largeLogo} />
+                    <source media="(min-width:400px)" srcset={mediumLogo} />
+                    <source media="(min-width:270px)" srcset={smallLogo} />
+                    <img src={mediumLogo} />
+                </picture>
     </motion.div>
 }
 
@@ -68,8 +79,8 @@ function NavList(){
                 <motion.p>Set Test</motion.p>
                 <motion.p>Take Test</motion.p>
                 <motion.p>Contact</motion.p>
-                <Button variant="contained">Login</Button>
-                <Button variant="outlined">Sign Up</Button>
+                <Button variant="contained" id="loginButton">Login</Button>
+                <Button variant="outlined" id="signUp">Sign Up</Button>
     </motion.div>
 }
 
