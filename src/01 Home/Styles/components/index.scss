@@ -107,7 +107,7 @@ body{
     #bodyText{
         text-align: justify;
         font-weight: 500;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     button{
         margin-top: 1rem;
@@ -361,7 +361,7 @@ body{
             font-size: 2.5rem;
         }
         #bodyText{
-            font-size: 1.2rem;
+            font-size: 0.9rem;
         }
 
         button{
@@ -403,6 +403,19 @@ body{
                 width: 100%;
                 height: 55vh;
             }
+      }
+  }
+
+    #benefitContainer{
+        flex-direction: row-reverse;
+        height: fit-content;
+        justify-content: stretch;
+        #imageContainer{
+            height: 70%;
+            width: 35%;
+        }
+        #listOBenefitContainer{
+            width: 70%;
         }
     }
     #footerContainer{
@@ -428,3 +441,4 @@ body{
         }
     }
 }
+
