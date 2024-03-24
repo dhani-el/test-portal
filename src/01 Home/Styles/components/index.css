@@ -25,6 +25,22 @@ body {
   align-items: center;
   padding: 1rem;
 }
+#NavigationContainer #logoContainer {
+  width: 30%;
+}
+#NavigationContainer #logoContainer #pictureElement {
+  width: 100%;
+}
+#NavigationContainer #logoContainer img {
+  width: 100%;
+}
+#NavigationContainer #navigationSub #navList #loginButton {
+  background-color: rgb(1, 16, 146);
+}
+#NavigationContainer #navigationSub #navList #signUp {
+  color: rgb(1, 16, 146);
+  border-color: rgb(1, 16, 146);
+}
 
 #menuIconContainer {
   display: flex;
@@ -94,6 +110,8 @@ body {
   margin-top: 1rem;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: rgb(1, 16, 146);
+  font-family: montserrat;
 }
 
 #heroContainer {
@@ -259,7 +277,13 @@ body {
   padding-bottom: 2rem;
 }
 #footerContainer #footerMainSection #logoContainer {
-  padding-top: 3.4rem;
+  width: 20%;
+}
+#footerContainer #footerMainSection #logoContainer #pictureElement {
+  width: 100%;
+}
+#footerContainer #footerMainSection #logoContainer img {
+  width: 100%;
 }
 #footerContainer #footerMainSection #footerCategoriesContainer {
   display: flex;
@@ -303,6 +327,15 @@ body {
 @media (orientation: landscape) {
   #NavigationContainer {
     padding: 2rem 5rem;
+  }
+  #NavigationContainer #logoContainer {
+    width: 8%;
+  }
+  #NavigationContainer #logoContainer #pictureElement {
+    width: 100%;
+  }
+  #NavigationContainer #logoContainer img {
+    width: 100%;
   }
   #navList {
     display: flex;
@@ -367,7 +400,13 @@ body {
     width: 100%;
   }
   #footerContainer #footerMainSection #logoContainer {
-    width: 20%;
+    width: 8%;
+  }
+  #footerContainer #footerMainSection #logoContainer #pictureElement {
+    width: 100%;
+  }
+  #footerContainer #footerMainSection #logoContainer img {
+    width: 100%;
   }
   #footerContainer #footerMainSection #footerCategoriesContainer {
     width: 75%;
