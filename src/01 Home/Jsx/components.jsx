@@ -76,8 +76,8 @@ function MenuBody({controller}){
 
 function NavList(){
     return <motion.div id="navList">
-                <motion.p>Set Test</motion.p>
-                <motion.p>Take Test</motion.p>
+                <motion.p>Examiner</motion.p>
+                <motion.p>Candidate</motion.p>
                 <motion.p>Contact</motion.p>
                 <Button variant="contained" id="loginButton">Login</Button>
                 <Button variant="outlined" id="signUp">Sign Up</Button>

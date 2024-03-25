@@ -1,4 +1,7 @@
 
+$purple:rgb(41, 49, 126);
+
+
 *{
     padding: 0;
     margin: 0;
@@ -15,6 +18,7 @@ body{
 
 #homeContainer{
     width: 100vw;
+    background-color: rgb(236, 230, 233);
 }
 
 #NavigationContainer{
@@ -36,11 +40,11 @@ body{
     #navigationSub{
         #navList{
             #loginButton{
-                background-color: rgb(1, 16, 146);
+                background-color: rgb(41, 49, 126);
             }
             #signUp{
-                color: rgb(1, 16, 146);
-                border-color: rgb(1, 16, 146);
+                color: rgb(41, 49, 126);
+                border-color: rgb(41, 49, 126);
             }
         }
     }
@@ -92,6 +96,12 @@ body{
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    #header{
+        color: black;
+    }
+    #bodyText{
+        color: rgb(74, 72, 72);
+    }
 }
 
 #textContainer{
@@ -112,7 +122,7 @@ body{
     button{
         margin-top: 1rem;
         width: fit-content;
-        background-color: rgb(1, 16, 146);
+        background-color: rgb(41, 49, 126);
         font-family: montserrat;
     }
 }
@@ -133,6 +143,17 @@ body{
     #heading{
         font-family: bebas;
         font-size: 2rem;
+    }
+
+    #bodyText{
+        color: rgb(73, 73, 73);
+        font-weight: 500;
+    }
+    .aMetric{
+        #heading + p{
+            color: black;
+            font-weight: 600;
+        }
     }
 }
 
@@ -206,7 +227,7 @@ body{
             gap: 1rem;
             span{
                 display: block;
-                border-top: 0.2rem rgb(0, 0, 81) solid;
+                border-top: 0.2rem $purple solid;
                 width: 6rem;
             }
             p{
@@ -347,6 +368,13 @@ body{
         display: flex;
         gap: 2.5rem;
         align-items: center;
+        p{
+            font-weight: 600;
+            color: rgba(0, 26, 255, 0.655);
+        }
+        button{
+            font-weight: 600;
+        }
     }
 
     #introContainer{
@@ -359,9 +387,11 @@ body{
         width: 50%;
         #header{
             font-size: 2.5rem;
+            align-self: flex-start;
         }
         #bodyText{
             font-size: 0.9rem;
+            line-height: 1.4rem;
         }
 
         button{
@@ -385,19 +415,46 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        #heading{
+            font-size: 3rem;
+            color: $purple;
+        }
         #bodyText{
             display: block;
-            width: 75%;
+            width: 65%;
+            font-size: 1.2rem;
+            line-height: 2rem;
         }
     }
     #Testimonial{
         flex-direction: row;
         gap: 2rem;
+        padding: 0rem 5rem;
+        justify-content: space-between;
         #GeneralTextContainer{
-            width: calc(50% - 1rem);
+            width: 45%;
+            #testimonialHeader{
+                p{
+                    font-size: 2.5rem;
+                }
+            }
+            #generalBody{
+                #theySay{
+                    font-size: 3.5rem;
+                    color: $purple;
+                }
+                #body{
+                    line-height: 1.6rem;
+                    font-weight: 500;
+                }
+            }
+            button{
+                background-color: $purple;
+                font-family: montserrat;
+            }
         }
         #listOTestimonials{
-            width: calc(50% - 1rem);
+            width: 45%;
             overflow-x: hidden;
             #aTestimonialContainer{
                 width: 100%;
@@ -407,15 +464,37 @@ body{
   }
 
     #benefitContainer{
-        flex-direction: row-reverse;
+        flex-direction: row;
         height: fit-content;
-        justify-content: stretch;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 0rem 5rem;
+
         #imageContainer{
             height: 70%;
             width: 35%;
+            border-radius: 4rem;
+            padding: 0.5rem;
+            img{
+                border-radius: 4rem;
+            }
         }
         #listOBenefitContainer{
-            width: 70%;
+            width: 50%;
+            #headingP{
+                font-size: 3rem;
+            }
+            #aBenefit{
+                #heading{
+                    color: $purple;
+                    font-size: 1.5rem;
+                }
+                #bodyText{
+                    font-weight: 500;
+                    line-height: 1.6rem;
+                }
+            }
         }
     }
     #footerContainer{
