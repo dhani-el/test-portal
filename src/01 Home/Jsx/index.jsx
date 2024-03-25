@@ -5,11 +5,11 @@ import { Navigation, Intro, Success, Benefit, Testimonial, Footer } from "./comp
 
 export default function Home(){
     return <motion.div id="homeContainer">
-                    <Navigation/>
+                    {/* <Navigation/> */}
                     <Intro/>
                     <Success/>
                     <Benefit/>
                     <Testimonial/>
-                    <Footer/>
+                    {/* <Footer/> */}
     </motion.div>
 }
