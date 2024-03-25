@@ -35,6 +35,9 @@ body {
 #NavigationContainer #logoContainer img {
   width: 100%;
 }
+#NavigationContainer #navigationSub #navList a {
+  text-decoration: none;
+}
 #NavigationContainer #navigationSub #navList #loginButton {
   background-color: rgb(41, 49, 126);
 }
@@ -244,6 +247,10 @@ body {
   padding-bottom: 1.5rem;
   text-align: justify;
 }
+#Testimonial #GeneralTextContainer button {
+  background-color: rgb(41, 49, 126);
+  font-family: montserrat;
+}
 #Testimonial #listOTestimonials {
   overflow-x: scroll;
 }
@@ -364,6 +371,15 @@ body {
   #navList button {
     font-weight: 600;
   }
+  #navList button:hover {
+    cursor: pointer;
+  }
+  #navList a:hover {
+    cursor: pointer;
+  }
+  #navList a:hover p {
+    color: rgba(0, 26, 255, 0.882);
+  }
   #introContainer {
     flex-direction: row;
     padding: 5rem;
@@ -430,10 +446,6 @@ body {
   #Testimonial #GeneralTextContainer #generalBody #body {
     line-height: 1.6rem;
     font-weight: 500;
-  }
-  #Testimonial #GeneralTextContainer button {
-    background-color: rgb(41, 49, 126);
-    font-family: montserrat;
   }
   #Testimonial #listOTestimonials {
     width: 45%;

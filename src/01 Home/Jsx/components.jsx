@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Hero from "../../assets/Hero.png"
 import "../Styles/components/index.css"
 import { Button } from "@mui/material";
@@ -75,12 +75,19 @@ function MenuBody({controller}){
 }
 
 function NavList(){
+        const navigate = useNavigate();
     return <motion.div id="navList">
-                <motion.p>Examiner</motion.p>
-                <motion.p>Candidate</motion.p>
-                <motion.p>Contact</motion.p>
-                <Button variant="contained" id="loginButton">Login</Button>
-                <Button variant="outlined" id="signUp">Sign Up</Button>
+                <Link to="" >
+                    <motion.p>Examiner</motion.p>
+                </Link>
+                <Link to="" >
+                    <motion.p>Candidate</motion.p>
+                </Link>
+                <Link to="" >
+                    <motion.p>Contact</motion.p>
+                </Link>
+                <Button variant="contained" id="loginButton" onClick={()=> navigate("")} >Login</Button>
+                <Button variant="outlined" id="signUp"onClick={()=> navigate("")} >Sign Up</Button>
     </motion.div>
 }
 

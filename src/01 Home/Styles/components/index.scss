@@ -39,6 +39,9 @@ body{
     }
     #navigationSub{
         #navList{
+            a{
+                text-decoration: none;
+            }
             #loginButton{
                 background-color: rgb(41, 49, 126);
             }
@@ -47,6 +50,7 @@ body{
                 border-color: rgb(41, 49, 126);
             }
         }
+       
     }
 }
 
@@ -250,6 +254,10 @@ body{
                 text-align: justify;
             }
         }
+        button{
+            background-color: $purple;
+            font-family: montserrat;
+        }
     }
     #listOTestimonials{
         overflow-x: scroll;
@@ -376,6 +384,17 @@ body{
             font-weight: 600;
         }
     }
+    #navList{
+        button:hover{
+            cursor: pointer;
+        }  
+        a:hover{
+            cursor: pointer;
+            p{
+                color:rgba(0, 26, 255, 0.882);
+            }
+        }  
+    } 
 
     #introContainer{
         flex-direction: row;
@@ -447,10 +466,6 @@ body{
                     line-height: 1.6rem;
                     font-weight: 500;
                 }
-            }
-            button{
-                background-color: $purple;
-                font-family: montserrat;
             }
         }
         #listOTestimonials{
