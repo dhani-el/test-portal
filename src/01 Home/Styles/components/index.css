@@ -13,8 +13,7 @@ body {
 }
 
 #homeContainer {
-  width: 100vw;
-  background-color: rgb(236, 230, 233);
+  width: 100%;
 }
 
 #NavigationContainer {
