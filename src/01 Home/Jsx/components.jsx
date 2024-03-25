@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import { useNavigate, Link } from "react-router-dom";
+import { register } from 'swiper/element/bundle';
 import Hero from "../../assets/Hero.png"
 import "../Styles/components/index.css"
 import { Button } from "@mui/material";
@@ -11,6 +12,7 @@ import largeLogo from "../../assets/logos/3.png";
 import xLargeLogo from "../../assets/logos/4.png";
 
 
+register()
 
 export function Navigation(){
     return <motion.div id="NavigationContainer">
@@ -176,7 +178,7 @@ function ABenefit({heading,bodyText}){
 }
 
 export function Testimonial(){
-    const testimonials = [{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"}]
+    const testimonials = [{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"},{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"},{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"},{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"}]
 
     return <motion.div id="Testimonial">
             <motion.div id="GeneralTextContainer">
@@ -202,15 +204,18 @@ function GeneralTestimonial(){
     </motion.div>
 }
 
-// @todo implement swiper or use horizontal scroll snapping 
 function ListOfTestimonials({testimonials}){
-    return <motion.div id="listOTestimonials">
+    const swiperElRef = useRef(null);
+
+    return <swiper-container ref={swiperElRef}  slides-per-view="1" navigation="true" pagination="true" id="listOTestimonials" >
                 {
-                    testimonials.map(function(testimonial){
-                            return <Atestimonial imgLinks={testimonial.image} name={testimonial.name} role={testimonial.role} words={testimonial.text} />
-                    })
+                   testimonials.map(function(testimonial){
+                             return <swiper-slide>
+                                            <Atestimonial imgLinks={testimonial.image} name={testimonial.name} role={testimonial.role} words={testimonial.text} />
+                                     </swiper-slide>
+                     })
                 }
-    </motion.div>
+            </swiper-container>
 }
 
 function Atestimonial({imgLinks,words,name,role}){
