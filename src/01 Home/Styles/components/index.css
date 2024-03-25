@@ -253,10 +253,10 @@ body {
 }
 #Testimonial #listOTestimonials {
   overflow-x: scroll;
+  width: 100%;
 }
 #Testimonial #listOTestimonials #aTestimonialContainer {
   height: 45vh;
-  width: 90vw;
   padding-top: 1rem;
 }
 #Testimonial #listOTestimonials #aTestimonialContainer #imageDiv {
@@ -284,6 +284,26 @@ body {
 }
 #Testimonial #listOTestimonials #aTestimonialContainer #textsDiv #biodataContainer #roleP {
   font-size: 0.8rem;
+}
+
+swiper-container::part(button-prev) {
+  color: rgb(41, 49, 126);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+swiper-container::part(button-next) {
+  color: rgb(41, 49, 126);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+swiper-container::part(bullet-active) {
+  background-color: rgb(41, 49, 126);
+}
+
+swiper-container::part(bullet) {
+  background-color: rgb(41, 49, 126);
 }
 
 #footerContainer {
@@ -394,7 +414,7 @@ body {
   }
   #textContainer #bodyText {
     font-size: 0.9rem;
-    line-height: 1.4rem;
+    line-height: 1.8rem;
   }
   #textContainer button {
     margin-top: 1rem;
@@ -450,6 +470,7 @@ body {
   #Testimonial #listOTestimonials {
     width: 45%;
     overflow-x: hidden;
+    color: rgb(41, 49, 126);
   }
   #Testimonial #listOTestimonials #aTestimonialContainer {
     width: 100%;
