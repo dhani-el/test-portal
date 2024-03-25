@@ -1,11 +1,12 @@
 
-
+import { FormZ } from "./components"
+import "../Styles/index.css"
 
 
 
 
 export default function Authentication(){
-    return <div>
-        Authentication
-    </div>
+    return <div id="AuthPageContainer">
+                <FormZ/>
+            </div>
 }
