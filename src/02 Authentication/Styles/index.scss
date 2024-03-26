@@ -79,7 +79,7 @@ $purple:rgb(41, 49, 126);
         display: flex;
         width: 100vw;
         height : 100vh;
-        padding: 0rem 4rem;
+        // padding: 0rem 4rem;
         justify-content: space-between;
         align-items: center;
         background-color: $purple;
@@ -120,14 +120,13 @@ $purple:rgb(41, 49, 126);
         position: absolute;
     }
     #envelopeTwo{
-        width: 45vw;
+        width: 35vw;
         top: 0;
-        left: 0;
+        
     }
     #envelopeOne{
-        width: 55vw;
+        width:55vw;
         top: 0;
-        right: 0;
     }
     
 }

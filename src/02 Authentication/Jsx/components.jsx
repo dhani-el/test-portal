@@ -74,26 +74,27 @@ function FormTwo(){
             </motion.div>
 }
 
-export function Feelings(){
-    return <motion.div id="feelingsContainer">
-                <FeelingOne />
-                <FeelingTwo/>
+export function Feelings({animationTrigger}){
+
+    return <motion.div id="feelingsContainer" >
+                <FeelingOne animationTrigger={animationTrigger}  />
+                <FeelingTwo animationTrigger={animationTrigger} />
             </motion.div>
 }
 
-function FeelingOne(){
+function FeelingOne({animationTrigger}){
     return <motion.div  id="aFeeling" >
                 <MajorText text={"Welcome Back!"}/>
                 <Subtext text={"To Continue Using Testal Please Enter Your Login Details"}/>
-                <MyButton text={"Sign In"}/>
+                <MyButton text={"Sign In"} animationTrigger={animationTrigger} />
             </motion.div>
 }
 
-function FeelingTwo(){
+function FeelingTwo({animationTrigger}){
     return <motion.div id="aFeeling" >
                 <MajorText text={"Hello, Friend"}/>
                 <Subtext text={"Enter The Details in The Form and Start Your Journey With Us"}/>
-                <MyButton text={"Sign Up"}/>
+                <MyButton text={"Sign Up"} animationTrigger={animationTrigger} />
             </motion.div>
 }
 function MajorText({text}){
@@ -104,6 +105,6 @@ function Subtext({text}){
     return <motion.p id="subText">{text}</motion.p>
 }
 
-function MyButton({text}){
-    return <motion.div id="customButton">{text}</motion.div>
+function MyButton({text,animationTrigger}){
+    return <motion.div  onClick={()=>animationTrigger()} id="customButton">{text}</motion.div>
 }
