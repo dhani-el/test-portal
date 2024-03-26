@@ -26,6 +26,7 @@ $purple:rgb(41, 49, 126);
         justify-content: center;
         gap: 10vw;
         align-items: center;
+        position: relative;
         .singleForm{
             display: flex;
             flex-direction: column;
@@ -79,6 +80,7 @@ $purple:rgb(41, 49, 126);
         display: flex;
         width: 100vw;
         height : 100vh;
+        position: relative;
         // padding: 0rem 4rem;
         justify-content: space-between;
         align-items: center;

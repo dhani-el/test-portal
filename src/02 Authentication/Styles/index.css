@@ -22,6 +22,7 @@
   justify-content: center;
   gap: 10vw;
   align-items: center;
+  position: relative;
 }
 #AuthPageContainer #formZ .singleForm {
   display: flex;
@@ -72,6 +73,7 @@
   display: flex;
   width: 100vw;
   height: 100vh;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(41, 49, 126);

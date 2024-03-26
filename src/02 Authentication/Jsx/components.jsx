@@ -8,8 +8,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AuthFormType } from "../../constants";
 
 
-export function FormZ(){
-    return <motion.div id="formZ">
+export function FormZ({shouldAnimate}){
+    const animation = {
+        initial:{
+            left:0,
+        },
+        slideLeft:{
+            left:"-45vw",
+            transition:{
+                duration:0.1,
+                delay:0.4
+            }
+        },
+        slideRight:{
+            left:"0vw",
+            transition:{
+                duration:0.1,
+                delay:0.4,
+            }
+        }
+    }
+    return <motion.div id="formZ" variants={animation} initial ="initial" animate = {shouldAnimate ? "slideLeft" : "slideRight"} >
                 <FormTwo/>
                 <FormOne/>
             </motion.div>
@@ -74,9 +93,27 @@ function FormTwo(){
             </motion.div>
 }
 
-export function Feelings({animationTrigger}){
-
-    return <motion.div id="feelingsContainer" >
+export function Feelings({animationTrigger , animationState}){
+    const animation = {
+        initial:{
+            left:0,
+        },
+        slideLeft:{
+            left:"-65vw",
+            transition:{
+                // duration:0.1,
+                delay:0.4
+            }
+        },
+        slideRight:{
+            left:"0vw",
+            transition:{
+                // duration:0.1,
+                delay:0.4,
+            }
+        }
+    }
+    return <motion.div id="feelingsContainer" variants={animation} initial = "initial" animate = {animationState ?"slideLeft" : "slideRight"} >
                 <FeelingOne animationTrigger={animationTrigger}  />
                 <FeelingTwo animationTrigger={animationTrigger} />
             </motion.div>

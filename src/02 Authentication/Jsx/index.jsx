@@ -1,5 +1,5 @@
 
-import { motion } from "framer-motion"
+import { motion} from "framer-motion"
 import { FormZ,Feelings } from "./components"
 import "../Styles/index.css"
 import { useState } from "react"
@@ -13,21 +13,19 @@ export default function Authentication(){
         envelope1:{
             initial:{
                 top:0,
-                right:"2vw",
-                left:"52vw"
+                right:"0vw",
+                
             },
             slideLeft:{
                 top:0,
-                left:"0vw",
-                right:"49vw",
+                right:"50vw",
                 transition:{
                     duration:1,
                 }
             },
             slideRight:{
                 top:0,
-                left:"52vw",
-                right:"2vw",
+                right:"0vw",
                 transition:{
                     duration:1,
                 }
@@ -37,19 +35,16 @@ export default function Authentication(){
             initial:{
                 top:0,
                 left:"0vw",
-                right:"35vw"
             },
             slideLeft:{
                 top:0,
                 left:"0vw",
-                right:"35vw",
                 transition:{
                     duration:1,
                 }
             },
             slideRight:{
                 top:0,
-                right:"0vw",
                 left:"65vw",
                 transition:{
                     duration:1,
@@ -65,10 +60,10 @@ export default function Authentication(){
 
     return <div id="AuthPageContainer">
                 <motion.div id="envelopeOne" className="envelope" variants={animations.envelope1} initial = "initial" animate = {animationState ? "slideLeft" : "slideRight"} >
-                    <FormZ/>
+                    <FormZ shouldAnimate={animationState}/>
                 </motion.div>
                 <motion.div id="envelopeTwo" className="envelope" variants={animations.envelope2} initial = "initial" animate = {animationState ? "slideRight" : "slideLeft"}>
-                    <Feelings animationTrigger={animationToggle}/>
+                    <Feelings animationTrigger={animationToggle} animationState={animationState}/>
                 </motion.div>
             </div>
 }
