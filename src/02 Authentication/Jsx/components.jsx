@@ -45,12 +45,6 @@ function AltLoginText({type}){
             </motion.div>
 }
 
-// function Formtional(){
-//     return <motion.div>
-//                 <FormOne/>
-//                 <FormTwo/>
-//             </motion.div>
-// }
 
 function FormOne(){
     return <motion.div className="singleForm" id="signUp" >
@@ -81,9 +75,35 @@ function FormTwo(){
 }
 
 export function Feelings(){
-    return <motion.div>
-        
-    </motion.div>
+    return <motion.div id="feelingsContainer">
+                <FeelingOne />
+                <FeelingTwo/>
+            </motion.div>
 }
 
+function FeelingOne(){
+    return <motion.div  id="aFeeling" >
+                <MajorText text={"Welcome Back!"}/>
+                <Subtext text={"To Continue Using Testal Please Enter Your Login Details"}/>
+                <MyButton text={"Sign In"}/>
+            </motion.div>
+}
 
+function FeelingTwo(){
+    return <motion.div id="aFeeling" >
+                <MajorText text={"Hello, Friend"}/>
+                <Subtext text={"Enter The Details in The Form and Start Your Journey With Us"}/>
+                <MyButton text={"Sign Up"}/>
+            </motion.div>
+}
+function MajorText({text}){
+    return <motion.p id="majorText">{text}</motion.p>
+}
+
+function Subtext({text}){
+    return <motion.p id="subText">{text}</motion.p>
+}
+
+function MyButton({text}){
+    return <motion.div id="customButton">{text}</motion.div>
+}

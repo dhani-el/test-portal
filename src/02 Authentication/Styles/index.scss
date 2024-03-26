@@ -13,14 +13,19 @@ $purple:rgb(41, 49, 126);
 
 #AuthPageContainer{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     #formZ{
         display: flex;
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
         padding: 0 4rem;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 10vw;
+        align-items: center;
         .singleForm{
             display: flex;
             flex-direction: column;
@@ -65,7 +70,64 @@ $purple:rgb(41, 49, 126);
             }
             button{
                 border-radius: 1.8rem;
+                background-color: $purple;
             }
         }
     }
+
+    #feelingsContainer{
+        display: flex;
+        width: 100vw;
+        height : 100vh;
+        padding: 0rem 4rem;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $purple;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        
+        #aFeeling{
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            gap: 2rem;
+            #majorText{
+                font-size: 2.2rem;
+                font-weight: 700;
+            }
+            #subText{
+                display: block;
+                width: 65%;
+                text-align: center;
+                line-height: 2rem;
+            }
+            #customButton{
+                width: 55%;
+                display: flex;
+                padding: 1rem;
+                border: 0.02rem white solid;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2rem;
+            }
+        }
+    }
+
+    .envelope{
+        position: absolute;
+    }
+    #envelopeTwo{
+        width: 45vw;
+        top: 0;
+        left: 0;
+    }
+    #envelopeOne{
+        width: 55vw;
+        top: 0;
+        right: 0;
+    }
+    
 }
