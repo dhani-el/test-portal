@@ -1,0 +1,67 @@
+#pageContainer {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0rem 4rem;
+}
+#pageContainer #progressContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 1.8rem;
+  align-items: center;
+}
+#pageContainer #progressContainer .css-eglki6-MuiLinearProgress-root {
+  width: 100%;
+  background-color: rgba(41, 49, 126, 0.641);
+  border-radius: 1rem;
+  height: 100%;
+}
+#pageContainer #progressContainer .css-eglki6-MuiLinearProgress-root .css-5xe99f-MuiLinearProgress-bar1 {
+  background-color: rgb(41, 49, 126);
+}
+#pageContainer #progressContainer #vsCountContainer {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#pageContainer #progressContainer #vsCountContainer p {
+  color: white;
+}
+#pageContainer #progressContainer #vsCountContainer #currentNumber {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#pageContainer #progressContainer #vsCountContainer #totalNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#pageContainer #titleNleaveContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+#pageContainer #titleNleaveContainer #leaveButtonContainer button {
+  font-family: montserrat;
+  background-color: rgb(146, 2, 2);
+  font-weight: 600;
+}
+#pageContainer #timeTracker {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pageContainer #timeTracker #clockIcon {
+  color: rgb(41, 49, 126);
+  font-size: 2rem;
+}
+#pageContainer #timeTracker #timez {
+  font-weight: 600;
+  display: block;
+  min-width: 10vw;
+  text-align: center;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=index.css.map */

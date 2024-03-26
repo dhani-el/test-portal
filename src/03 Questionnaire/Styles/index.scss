@@ -1,0 +1,75 @@
+$purple:rgb(41, 49, 126);
+$light-purple : rgba(41, 49, 126, 0.641);
+
+
+#pageContainer{
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0rem 4rem;
+    #progressContainer{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 1.8rem;
+        align-items: center;
+        .css-eglki6-MuiLinearProgress-root{
+            width: 100%;
+            background-color: $light-purple ;
+            border-radius: 1rem;
+            height: 100%;
+            .css-5xe99f-MuiLinearProgress-bar1{
+                background-color: $purple
+            }
+        }
+        #vsCountContainer{
+            position: absolute;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            p{
+                color: white;
+            }
+            #currentNumber{
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+            #totalNumber{
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+        }
+
+    }
+    #titleNleaveContainer{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        #leaveButtonContainer{
+            button{
+                font-family: montserrat;
+                background-color: rgb(146, 2, 2);
+                font-weight: 600;
+            }
+        }
+    }
+    #timeTracker{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        #clockIcon{
+            color: $purple;
+            font-size: 2rem;
+        }
+        #timez{
+            font-weight: 600;
+            display: block;
+            min-width: 10vw;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+    }
+}
