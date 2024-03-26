@@ -88,8 +88,8 @@ function NavList(){
                 <Link to="" >
                     <motion.p>Contact</motion.p>
                 </Link>
-                <Button variant="contained" id="loginButton" onClick={()=> navigate("")} >Login</Button>
-                <Button variant="outlined" id="signUp"onClick={()=> navigate("")} >Sign Up</Button>
+                <Button variant="contained" id="loginButton" onClick={()=> navigate("/login")} >Login</Button>
+                <Button variant="outlined" id="signUp"onClick={()=> navigate("/signup")} >Sign Up</Button>
     </motion.div>
 }
 
