@@ -6,6 +6,7 @@
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 #pageContainer #progressContainer {
   position: relative;
@@ -41,68 +42,63 @@
   font-size: 1.2rem;
   font-weight: 700;
 }
-#pageContainer #titleNleaveContainer {
+#pageContainer #titleNPrevContainer {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0rem;
 }
-#pageContainer #titleNleaveContainer #leaveButtonContainer button {
+#pageContainer #titleNPrevContainer #leaveButtonContainer button {
   font-family: montserrat;
-  background-color: rgb(146, 2, 2);
   font-weight: 600;
+  color: rgb(41, 49, 126);
 }
 #pageContainer #timeTracker {
   display: flex;
-  width: 100%;
   align-items: center;
-  justify-content: flex-end;
+  gap: 0.5rem;
 }
 #pageContainer #timeTracker #clockIcon {
   color: rgb(41, 49, 126);
-  font-size: 2rem;
 }
 #pageContainer #timeTracker #timez {
   font-weight: 600;
   display: block;
-  min-width: 10vw;
   text-align: center;
-  font-size: 1.2rem;
 }
 #pageContainer #QandAContainer {
   width: 100%;
   padding: 0rem 2rem;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
 }
 #pageContainer #QandAContainer #QuestionContainer {
   width: 60%;
   min-height: 20vh;
-  padding: 4rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
-  background-color: rgba(177, 173, 220, 0.284);
   text-align: justify;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 #pageContainer #QandAContainer #QuestionContainer #question {
-  font-weight: 600;
-  line-height: 1.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
 #pageContainer #QandAContainer #QuestionContainer #number {
-  position: absolute;
-  top: 0.5rem;
-  left: 2rem;
-  font-size: 2rem;
-  color: rgba(41, 49, 126, 0.641);
+  color: rgb(41, 49, 126);
   font-weight: 400;
   font-family: bebas;
 }
 #pageContainer #optionsContainer {
   width: 60%;
   padding: 2rem 4rem;
-  background-color: aliceblue;
   border-radius: 1rem;
 }
 #pageContainer #optionsContainer .ASingleOPtion {
@@ -112,6 +108,7 @@
   border-radius: 0.5rem;
   padding: 1rem 0.4rem;
   margin-bottom: 1rem;
+  background-color: aliceblue;
 }
 #pageContainer #optionsContainer .ASingleOPtion .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
   color: rgb(41, 49, 126);
@@ -126,7 +123,7 @@
 #pageContainer #actionButtonsContainer {
   display: flex;
   width: 60%;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 4rem;
 }
 #pageContainer #actionButtonsContainer button {
@@ -134,8 +131,25 @@
   color: white;
   font-family: montserrat;
   font-weight: 500;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
 }
 #pageContainer *::-webkit-scrollbar {
   width: 1rem;
   height: 0;
+}
+#pageContainer #progressContainer2 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+}
+#pageContainer #progressContainer2 #singleRep {
+  height: 0.3rem;
+  background-color: rgba(41, 49, 126, 0.641);
+  flex-grow: 1;
+  border-radius: 0.5rem;
+}
+#pageContainer #progressContainer2 #singleRep.attempted {
+  background-color: rgb(41, 49, 126);
 }/*# sourceMappingURL=index.css.map */

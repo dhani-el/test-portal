@@ -5,6 +5,7 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Checkbox from "@mui/material/Checkbox";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
+import { ArrowBack,ArrowForward } from "@mui/icons-material";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { useState,useEffect } from "react";
 import { intervalToDuration } from "date-fns";
@@ -12,7 +13,7 @@ import {OptionsType} from "../../constants"
 
 
 export function TestTitle({title}){
-    return <motion.div>
+    return <motion.div id="testTitle">
                 <motion.p>{title}</motion.p>
     </motion.div>
 }
@@ -27,8 +28,8 @@ export function TimeTracker({projectedTime}){
       }, []);
     
     return <motion.div id="timeTracker" >
-                <FontAwesomeIcon icon={faClock} fontWeight={"100"} id="clockIcon" />
                 <motion.p id="timez"> {(timeLeft.hours || "00")} : {timeLeft.minutes || "00"} : {timeLeft.seconds || "00"} </motion.p>
+                <FontAwesomeIcon icon={faClock} fontWeight={"100"} id="clockIcon" />
             </motion.div>
 }
 
@@ -40,29 +41,48 @@ export function Progress({total,current}){
             </motion.div>
 }
 
-export function Leave(){
+export function Progress2({total,attempted}){
+const totalRepArray = arraylize();
+    function arraylize(){
+        let res = []
+        for(let i = 0 ; i < total; i++){
+            res.push(i);
+        }
+        return res
+    }
+
+return <motion.div id="progressContainer2">
+                {
+                    totalRepArray.map((one,index)=>{
+                        return <motion.div id="singleRep" className={(attempted <= index) || "attempted"}></motion.div>
+                    })
+                }
+        </motion.div>
+}
+
+export function Previous(){
     return <motion.div id="leaveButtonContainer">
-                <Button variant="contained" >LEAVE</Button>
+                <Button > <ArrowBack/>  Previous</Button>
     </motion.div>
 }
 
 export function VsCount({total,current}){
     return <motion.div id="vsCountContainer">
-                <motion.p id="currentNumber">{current}/</motion.p> <motion.p id="totalNumber">{total}</motion.p>
+                <motion.p id="currentNumber"> Question {current}/</motion.p> <motion.p id="totalNumber">{total}</motion.p>
     </motion.div>
 }
 
-export function QandA({question,number,options}){
+export function QandA({question,number,options,total}){
     return <motion.div id="QandAContainer">
-                <Question question={question} number={number}/>
-                <Options options={options} type={OptionsType.Checkbox}/>
+                <Question question={question} number={number} total={total}/>
+                <Options options={options} type={OptionsType.Radio}/>
                 <ActionButtons/>
     </motion.div>
 }
 
-export function Question({question,number}){
+export function Question({question,number,total}){
     return <motion.div id="QuestionContainer">
-                <motion.p id="number">{number}.</motion.p>
+                <motion.p id="number">Question {number} of {total}.</motion.p>
                 <motion.p id="question">{question}</motion.p>
     </motion.div>
 }
@@ -110,7 +130,6 @@ function AcheckBoxOPtion({text}){
 export function ActionButtons({done}){
 
     return <motion.div id="actionButtonsContainer">
-        {!done && <PreviouseQuestionButton/>}
         <NextOrSubmitButton done={done} />
     </motion.div>
 }
@@ -120,5 +139,5 @@ function PreviouseQuestionButton(){
 }
 
 function NextOrSubmitButton({done}){
-    return <Button>{done?"Submit":"Next"}</Button>
+    return <Button>{done?"Submit ":"Next Question"} <ArrowForward/></Button>
 }
