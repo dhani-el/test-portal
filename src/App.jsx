@@ -21,11 +21,11 @@ const routes = createBrowserRouter([
       },{
         path:"/signup",
         element:<Authentication/>
-      },{
-        path:"/questions",
-        element:<Questionnaire/>
       }
     ]
+  },{
+    path:"/questions",
+    element:<Questionnaire/>
   }
 ])
 

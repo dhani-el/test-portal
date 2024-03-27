@@ -5,7 +5,13 @@ $light-purple : rgba(41, 49, 126, 0.641);
 #pageContainer{
     width: 100vw;
     min-height: 100vh;
+    gap: 2rem;
+    // height: max-content ;
     padding: 0rem 4rem;
+    padding-bottom:2rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     #progressContainer{
         position: relative;
         display: flex;
@@ -35,41 +41,145 @@ $light-purple : rgba(41, 49, 126, 0.641);
                 font-weight: 500;
             }
             #totalNumber{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 font-weight: 700;
             }
 
         }
 
     }
-    #titleNleaveContainer{
+    #titleNPrevContainer{
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        padding: 1rem 0rem;
+        // #testTitle{
+        //     font-weight: 700;
+        //     font-size: 1.4rem;
+
+        // }
         #leaveButtonContainer{
+
             button{
                 font-family: montserrat;
-                background-color: rgb(146, 2, 2);
                 font-weight: 600;
+                color: $purple
+                ;
             }
         }
     }
     #timeTracker{
         display: flex;
-        width: 100%;
         align-items: center;
-        justify-content: flex-end;
+        gap: 0.5rem;
         #clockIcon{
             color: $purple;
-            font-size: 2rem;
         }
         #timez{
             font-weight: 600;
             display: block;
-            min-width: 10vw;
             text-align: center;
-            font-size: 1.2rem;
         }
     }
+    #QandAContainer{
+        width: 100%;
+        padding: 0rem 2rem;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #QuestionContainer{
+            width: 60%;
+            min-height: 20vh;
+            padding:1rem 2rem;
+            border-radius: 0.5rem;
+            // background-color: rgba(177, 173, 220, 0.284);
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            #question{
+                font-weight: 700;
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+            }
+            #number{
+                // position: absolute;
+                // top: 0.5rem;
+                // left: 2rem;
+                // font-size: 2rem;
+                color: $purple;
+                font-weight: 400;
+                font-family: bebas;
+            }
+        }
+    }
+    #optionsContainer{
+        width: 60%;
+        // max-height: 50vh;
+        padding: 2rem 4rem;
+        // background-color: aliceblue;
+        border-radius: 1rem;
+        .ASingleOPtion{
+            display: flex;
+            align-items: center;
+            border: $purple 0.1rem solid;
+            border-radius: 0.5rem;
+            padding: 1rem 0.4rem;
+            margin-bottom: 1rem;
+            background-color: aliceblue;
+            .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root{
+                color: $purple;
+            }
+            .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1hbvpl3-MuiSvgIcon-root,.css-11zohuh-MuiSvgIcon-root{
+                color: $purple;
+            }
+            .text{
+                display: block;
+                width: 85%;
+
+            }
+        }
+
+    }
+    #actionButtonsContainer{
+        display: flex;
+        width: 60%;
+        justify-content: center;
+        padding: 0 4rem;
+        button{
+        background-color: $purple;
+        color: white;
+        font-family: montserrat;
+        font-weight: 500;
+        border-radius: 2rem;
+        padding: 1rem 3rem;
+        }
+
+    }
+
+    *::-webkit-scrollbar{
+        width: 1rem;
+        height: 0;
+
+    }
+
+    #progressContainer2{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 0.5rem;
+        #singleRep{
+            height: 0.3rem;
+            background-color: $light-purple;
+            flex-grow: 1;
+            border-radius: 0.5rem;
+        }
+        #singleRep.attempted{
+            background-color:$purple;
+        }
+    }
+
 }
