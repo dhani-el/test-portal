@@ -1,7 +1,11 @@
 #pageContainer {
   width: 100vw;
   min-height: 100vh;
+  gap: 2rem;
   padding: 0rem 4rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 #pageContainer #progressContainer {
   position: relative;
@@ -34,7 +38,7 @@
   font-weight: 500;
 }
 #pageContainer #progressContainer #vsCountContainer #totalNumber {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 #pageContainer #titleNleaveContainer {
@@ -64,4 +68,74 @@
   min-width: 10vw;
   text-align: center;
   font-size: 1.2rem;
+}
+#pageContainer #QandAContainer {
+  width: 100%;
+  padding: 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#pageContainer #QandAContainer #QuestionContainer {
+  width: 60%;
+  min-height: 20vh;
+  padding: 4rem;
+  border-radius: 0.5rem;
+  background-color: rgba(177, 173, 220, 0.284);
+  text-align: justify;
+  position: relative;
+}
+#pageContainer #QandAContainer #QuestionContainer #question {
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+#pageContainer #QandAContainer #QuestionContainer #number {
+  position: absolute;
+  top: 0.5rem;
+  left: 2rem;
+  font-size: 2rem;
+  color: rgba(41, 49, 126, 0.641);
+  font-weight: 400;
+  font-family: bebas;
+}
+#pageContainer #optionsContainer {
+  width: 60%;
+  padding: 2rem 4rem;
+  background-color: aliceblue;
+  border-radius: 1rem;
+}
+#pageContainer #optionsContainer .ASingleOPtion {
+  display: flex;
+  align-items: center;
+  border: rgb(41, 49, 126) 0.1rem solid;
+  border-radius: 0.5rem;
+  padding: 1rem 0.4rem;
+  margin-bottom: 1rem;
+}
+#pageContainer #optionsContainer .ASingleOPtion .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+  color: rgb(41, 49, 126);
+}
+#pageContainer #optionsContainer .ASingleOPtion .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1hbvpl3-MuiSvgIcon-root, #pageContainer #optionsContainer .ASingleOPtion .css-11zohuh-MuiSvgIcon-root {
+  color: rgb(41, 49, 126);
+}
+#pageContainer #optionsContainer .ASingleOPtion .text {
+  display: block;
+  width: 85%;
+}
+#pageContainer #actionButtonsContainer {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  padding: 0 4rem;
+}
+#pageContainer #actionButtonsContainer button {
+  background-color: rgb(41, 49, 126);
+  color: white;
+  font-family: montserrat;
+  font-weight: 500;
+}
+#pageContainer *::-webkit-scrollbar {
+  width: 1rem;
+  height: 0;
 }/*# sourceMappingURL=index.css.map */

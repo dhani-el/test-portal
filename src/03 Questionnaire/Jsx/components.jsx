@@ -2,9 +2,13 @@ import { motion } from "framer-motion";
 import { Button } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LinearProgress from "@mui/material/LinearProgress";
+import Checkbox from "@mui/material/Checkbox";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { useState,useEffect } from "react";
 import { intervalToDuration } from "date-fns";
+import {OptionsType} from "../../constants"
 
 
 export function TestTitle({title}){
@@ -48,30 +52,73 @@ export function VsCount({total,current}){
     </motion.div>
 }
 
-export function QandA(){
-    return <motion.div>
-
+export function QandA({question,number,options}){
+    return <motion.div id="QandAContainer">
+                <Question question={question} number={number}/>
+                <Options options={options} type={OptionsType.Checkbox}/>
+                <ActionButtons/>
     </motion.div>
 }
 
-export function Question(){
-    return <motion.div>
-
+export function Question({question,number}){
+    return <motion.div id="QuestionContainer">
+                <motion.p id="number">{number}.</motion.p>
+                <motion.p id="question">{question}</motion.p>
     </motion.div>
 }
 
-export function Options(){
-    return <motion.div>
-
+export function Options({options,type}){
+    return <motion.div id="optionsContainer">
+                    {(type === OptionsType.Radio) ? <RadioOptions options={options}/> : <CheckBoxOptions options={options} />}
     </motion.div>
 }
 
-export function ActionButtons(){
-    return <motion.div>
+function RadioOptions({options}){
+    return <motion.div id="radioOptionsContainer">
+                        <RadioGroup defaultValue="daniel" >
+                    {
+                        options.map(function(oneOption){
+                            return   <AradioOption text={oneOption} />
+                        })
+                    }
+                </RadioGroup>
+            </motion.div>
+}
 
+function AradioOption({text}){
+    return <motion.div id="radioOption" className="ASingleOPtion">
+                <Radio value={text} /> <motion.p className="text">{text}</motion.p>
+            </motion.div>
+}
+
+function CheckBoxOptions({options}){
+    return <motion.div>
+                    {
+                        options.map(function(oneOption){
+                            return   <AcheckBoxOPtion text={oneOption} />
+                        })
+                    }
+            </motion.div>
+}
+
+function AcheckBoxOPtion({text}){
+    return <motion.div className="ASingleOPtion" id="checkboxOption">
+                <Checkbox value={text} /> <motion.p className="text">{text}</motion.p>
+            </motion.div>
+}
+
+export function ActionButtons({done}){
+
+    return <motion.div id="actionButtonsContainer">
+        {!done && <PreviouseQuestionButton/>}
+        <NextOrSubmitButton done={done} />
     </motion.div>
 }
 
+function PreviouseQuestionButton(){
+    return <Button>Previous</Button>
+}
 
-
-// console.log(intervalToDuration({start:Date.now(),end:projectedTime}));
+function NextOrSubmitButton({done}){
+    return <Button>{done?"Submit":"Next"}</Button>
+}
