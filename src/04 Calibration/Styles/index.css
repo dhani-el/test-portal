@@ -31,4 +31,41 @@
 }
 #calibratiorEngineContainer .aCalibratorStrip #done.pointCalibrator .hotSpot {
   background-color: rgb(0, 26, 255);
+}
+
+#popUpMainContainer {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 40%;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+  background-color: rgba(80, 91, 194, 0.641);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#popUpMainContainer button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.4rem;
+  font-weight: 600;
+}
+#popUpMainContainer #prevButton {
+  background-color: transparent;
+  border-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+#popUpMainContainer #prevButton svg {
+  font-size: 1rem;
+}
+#popUpMainContainer #nextButton {
+  align-self: flex-end;
+  background-color: aliceblue;
+  box-shadow: none;
+  border-color: transparent;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
 }/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,5 @@
 $purple:rgb(0, 26, 255);
-
+$light-purple : rgba(80, 91, 194, 0.641);
 
 *::-webkit-scrollbar{
     width: 0px;
@@ -36,5 +36,41 @@ $purple:rgb(0, 26, 255);
                 background-color: $purple;
             }
         }
+    }
+}
+
+#popUpMainContainer{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 40%;
+    padding: 2rem 2rem;
+    border-radius: 0.5rem;
+    background-color: $light-purple;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    button{
+        width: fit-content;
+        padding: 0.4rem;
+        font-weight: 600;
+    }
+    #prevButton{
+        background-color: transparent;
+        border-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        svg{
+            font-size: 1rem;
+        }
+    }
+    #nextButton{
+        align-self: flex-end;
+        background-color: aliceblue;
+        box-shadow: none;
+        border-color: transparent;
+        border-radius: 0.2rem;
+        margin-top: 1rem;
     }
 }

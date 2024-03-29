@@ -1,7 +1,14 @@
 
 import { motion } from "framer-motion"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { arrayLize } from "../../utils";
+import { register} from 'swiper/element/bundle';
+import { ArrowBack } from "@mui/icons-material";
+
+
+register()
+
+
 
 export function CalibratorEngine({caliStripAmt = 5 , pCaliAmt = 5}){
     return <motion.div id="calibratiorEngineContainer">
@@ -39,10 +46,44 @@ export function CalibratorTestEngine(){
             </motion.div>
 }
 
-export function PopupWalkThrough(){
+export function PopupWalkThrough({instructions = []}){
+    const swiperElRef = useRef(null);
+    // const swiper  = swiperElRef?.current?.swiper;
+    return <>
+                    <motion.button id="prevButton" onClick={()=>swiper.slidePrev()}>
+                        <ArrowBack/> Previous
+                    </motion.button>
+                    <swiper-container ref={swiperElRef}  slides-per-view="1" id="instructions" >
+                            {
+                            instructions.map(function(instruction){
+                                        return <swiper-slide>
+                                                        <Instruction text={instruction}/>
+                                                </swiper-slide>
+                                })
+                            }
+                    </swiper-container>
+                    <motion.button id="nextButton" onClick={()=> swiper?.isEnd ?"": swiper.slideNext()}>
+                            {/* {swiper?.isEnd ?"Close":"Next"} */}
+                    </motion.button>
+            </>
+
+}
+
+function Instruction({text}){
     return <motion.div>
-        
-    </motion.div>
+                <motion.p>{text}</motion.p>
+            </motion.div>
+}
+
+function InstructionSlideControls(){
+    return <motion.div id="slideControls">
+                <motion.button>
+                    Previous
+                </motion.button>
+                <motion.button>
+                    Next
+                </motion.button>
+            </motion.div>
 }
 
 export function PopupWalkThrough2(){
