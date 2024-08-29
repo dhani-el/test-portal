@@ -18,8 +18,22 @@ body{
 
 #homeContainer{
     width: 100%;
+    position: relative;
     // background-color: rgb(236, 230, 233);
 }
+
+      
+#homeContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.06;
+    background-image: url(../../../assets/bg1.jpg);
+    z-index: -1;
+  }
 
 #NavigationContainer{
     width: 100vw;
@@ -28,6 +42,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    background-color: rgb(255, 221, 0);
     #logoContainer{
         width: 30%;
         #pictureElement{
@@ -376,7 +391,7 @@ swiper-container::part(bullet) {
 @media (orientation: "landscape"){
     
     #NavigationContainer{
-        padding: 2rem 5rem;
+        padding: 1rem 5rem;
         #logoContainer{
             width: 8%;
             #pictureElement{

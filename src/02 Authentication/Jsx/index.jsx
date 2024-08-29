@@ -2,13 +2,13 @@
 import { motion} from "framer-motion"
 import { FormZ,Feelings } from "./components"
 import "../Styles/index.css"
-import { useState } from "react"
-
-
+import { useState,useEffect } from "react"
+import { useLocation } from "react-router-dom"
 
 
 export default function Authentication(){
     const [animationState,setAnimationState] = useState(false);
+    const location = useLocation();
     const animations = {
         envelope1:{
             initial:{
@@ -57,6 +57,14 @@ export default function Authentication(){
     function animationToggle(){
         setAnimationState(init => !init)
     }
+
+    useEffect(()=>{
+        if(location.pathname === "/signup"){
+            setAnimationState(init=>true)
+        }else if(location.pathname === "/login"){
+            setAnimationState(init=>false)
+        }
+    },[location])
 
     return <div id="AuthPageContainer">
                 <motion.div id="envelopeOne" className="envelope" variants={animations.envelope1} initial = "initial" animate = {animationState ? "slideLeft" : "slideRight"} >
