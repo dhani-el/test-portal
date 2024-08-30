@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { motion, useAnimationControls } from "framer-motion";
+import { AnimationControls, motion, useAnimationControls } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import { useNavigate, Link } from "react-router-dom";
 import { register } from 'swiper/element/bundle';
@@ -26,30 +26,34 @@ function Logo(){
 
     return <motion.div id="logoContainer" onClick={()=>{navigate("/")}}>
                 <picture id="pictureElement">
-                    <source media="(min-width:1200px)" srcset={xLargeLogo} />
-                    <source media="(min-width:800px)" srcset={largeLogo} />
-                    <source media="(min-width:400px)" srcset={mediumLogo} />
-                    <source media="(min-width:270px)" srcset={smallLogo} />
+                    <source media="(min-width:1200px)" srcSet={xLargeLogo} />
+                    <source media="(min-width:800px)" srcSet={largeLogo} />
+                    <source media="(min-width:400px)" srcSet={mediumLogo} />
+                    <source media="(min-width:270px)" srcSet={smallLogo} />
                     <img src={mediumLogo} />
                 </picture>
     </motion.div>
 }
 
+interface menuIconProp{
+    controller:AnimationControls
+}
+
 function NavigationSub(){
     const isLandscape = useMediaQuery({ query: '(orientation: landscape)' });
-    const menuBodyController = useAnimationControls();
+    const menuBodyController:AnimationControls = useAnimationControls();
     return <motion.div id="navigationSub">
-                {isLandscape ? <NavList/> : <MenuIcon bodyController={menuBodyController}/>}
+                {isLandscape ? <NavList/> : <MenuIcon controller={menuBodyController}/>}
                 {!isLandscape && <MenuBody controller={menuBodyController} />}
     </motion.div>
 }
 
-function MenuIcon({bodyController}){
+function MenuIcon({controller}:menuIconProp){
     const [menuDeployed, setMenuDeployed] = useState(false)
-    function handleClick(){
-        setMenuDeployed(function(init){return !init})
+    function handleClick():void{
+        setMenuDeployed(function(init:boolean):boolean{return !init})
         console.log(menuDeployed);
-        bodyController.start(menuDeployed ?"initial":"slidIn");
+        controller.start(menuDeployed ?"initial":"slidIn");
     }
     return <motion.div id="menuIconContainer"  onClick={handleClick} >
                 <motion.div id="one"></motion.div>
@@ -58,7 +62,7 @@ function MenuIcon({bodyController}){
     </motion.div>
 }
 
-function MenuBody({controller}){
+function MenuBody({controller}:menuIconProp){
     const anima = {
         initial:{
             left:"100%",
@@ -159,7 +163,10 @@ export function Benefit(){
                 <ListOBenefit/>
     </motion.div>
 }
-
+interface benefitProp{
+    heading:string,
+    bodyText:string
+}
 function ListOBenefit(){
     const bodycontents = ["With testal you get can realtime updates on what actions your test takers are performing resulting in better overseeing of your test takers","Testal gives you the opportunity to accurately review the actions of your test takers through out the test or examination","To help with making decisons on the integrity of a test taker during an exam or test we at testal have provided an avenue to send a summary on of the actions taken by the test taker to assist with your decision"]
     return <motion.div id="listOBenefitContainer">
@@ -170,15 +177,21 @@ function ListOBenefit(){
     </motion.div>
 }
 
-function ABenefit({heading,bodyText}){
+function ABenefit({heading,bodyText}:benefitProp){
     return <motion.div id="aBenefit">
                 <motion.p id="heading">{heading}</motion.p>
                 <motion.p id="bodyText">{bodyText}</motion.p>
     </motion.div>
 }
 
+interface mainTestimonial{
+    image: string;
+    text: string;
+    name: string;
+    role: string;
+}
 export function Testimonial(){
-    const testimonials = [{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"},{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"},{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"},{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"}]
+    const testimonials:mainTestimonial[] = [{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"},{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"},{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"},{image:Hero,text:"This platform really helped with my scout for a junior developer, I was able to set this test woth confidence that there will be no funny business on the part of my test takers ",name:"Anne Burrel",role:"UI/UX designer"}]
 
     return <motion.div id="Testimonial">
             <motion.div id="GeneralTextContainer">
@@ -204,12 +217,23 @@ function GeneralTestimonial(){
     </motion.div>
 }
 
-function ListOfTestimonials({testimonials}){
+interface testimonialProp{
+    image :string,
+    role:string,
+    name:string,
+    text:string
+}
+
+type testiProp = {
+    testimonials:mainTestimonial[]
+}
+
+function ListOfTestimonials({testimonials}:testiProp){
     const swiperElRef = useRef(null);
 
     return <swiper-container ref={swiperElRef}  slides-per-view="1" navigation="true" pagination="true" id="listOTestimonials" >
                 {
-                   testimonials.map(function(testimonial){
+                   testimonials.map(function(testimonial:testimonialProp){
                              return <swiper-slide>
                                             <Atestimonial imgLinks={testimonial.image} name={testimonial.name} role={testimonial.role} words={testimonial.text} />
                                      </swiper-slide>
@@ -218,7 +242,14 @@ function ListOfTestimonials({testimonials}){
             </swiper-container>
 }
 
-function Atestimonial({imgLinks,words,name,role}){
+interface SingleTestimonial{
+    imgLinks:string,
+    words:string,
+    name:string,
+    role:string
+}
+
+function Atestimonial({imgLinks,words,name,role}:SingleTestimonial){
     return <motion.div id="aTestimonialContainer">
                 <motion.div id="imageDiv">
                     <motion.img src={imgLinks} />
@@ -255,7 +286,11 @@ function FooterCategories(){
             </motion.div>
 }
 
-function FooterCategory({header,subContents = []}){
+interface footerProp{
+    header:string,
+    subContents:string[]
+}
+function FooterCategory({header,subContents = []}:footerProp){
     return <motion.div id="footerCategoryContainer">
                 <motion.p id="categoryHeading">
                     {header}
