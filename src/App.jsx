@@ -2,8 +2,9 @@
 import Home from "./01 Home/Jsx/index";
 import Authentication from "./02 Authentication/Jsx";
 import Questionnaire from "./03 Questionnaire/Jsx";
-import Calibration from "./04 Calibration/Jsx";
+// import Calibration from "./04 Calibration/Jsx";
 import Layout from "./00 Layout";
+import SearchPage from "./CandidateDashBoard/Search/search";
 import "./general style/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -29,7 +30,11 @@ const routes = createBrowserRouter([
     element:<Questionnaire/>
   },{
     path:"/calibrate",
-    element:<Calibration/>
+    element:<Questionnaire/>
+  },
+  {
+    path:"/search",
+    element:<SearchPage/>
   }
 ])
 

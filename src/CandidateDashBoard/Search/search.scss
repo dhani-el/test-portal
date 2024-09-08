@@ -1,0 +1,13 @@
+
+#search-page-container{
+    width: 100vw;
+    padding: 1rem;
+    #search-bar-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+            width: 90%;
+        }
+    }
+}
